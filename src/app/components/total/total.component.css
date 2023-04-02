@@ -1,0 +1,29 @@
+.cart1{
+    width: 35%;
+    margin-top: 25rem;
+    float: right;
+    margin-right: -32rem;
+    border: 1px solid rgb(181, 180, 180);
+    box-shadow: 0px 5px 10px 0px #aaa;
+    background-color: white;
+    opacity: 90%;
+    color: black;
+}
+
+div{
+    margin: .5rem;
+}
+
+#total{
+    width: 35%;
+    margin-top: 32rem;
+    float: right;
+    margin-right: -32.5rem;
+    border: 1px solid rgb(181, 180, 180);
+    box-shadow: 0px 5px 10px 0px #aaa;
+    z-index: 2;
+    padding: 1rem;
+    color:white;
+    background-color: rgba(240, 248, 255, 0.742);
+}
+
