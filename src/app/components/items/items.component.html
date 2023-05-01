@@ -1,34 +1,39 @@
 
-  <div class="row ">
-     <ng-container > 
-
-        <div class="col-md-4 " style="padding:9px; margin-top:5px" *ngFor="let item of product.products">
-          <div class="card shadow-sm">
-            <div class="mask" style="background-color: rgba(0, 0, 0, 0.76); z-index: 1;color:white;width:50px"><small>{{item.discountPercentage}}%</small></div>
+<div class="row ">
+       
+  <div class="col-md-4 " style="padding:9px; margin-top:5px" *ngFor="let item of product.products">
+      <div class="card shadow-sm">
+            <div class="mask" style="background-color: rgba(0, 0, 0, 0.76); z-index: 1;color:white;width:50px">
+              <small>{{item.discountPercentage}}%</small></div>
 
             <img class="bd-placeholder-img card-img-top p-2" src="{{item.thumbnail}}" height="220px" width="100%" >
-            <div class="card-body bg-secondary"style="padding:1rem">
+          <div class="card-body bg-secondary"style="padding:1rem">
               <strong class="card-text">{{item.title}}</strong>
         
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="d-flex justify-content-start">
-                <small class="text-body-secondary"><del>$<span>{{item.price}}</span></del></small>
+             <div class="d-flex justify-content-between align-items-center">
+              <div class="d-flex justify-content-start">
+                <div class="text-body-secondary"
+                  style="font-weight: 4px;" >
+                  
+                  <del>$<span>{{item.price_new}}</span></del>
+                
+                </div>
                 <h5 class="font-weight-boldy">$<span>{{item.price}}</span></h5>
               </div>
         
-                <div class="btn-group">
+                <div class="btn-group" >
                     <button type="button" class="btn btn-sm btn-outline-light p-2" 
-                    (click)="addtocart(item)">
+                    (click)=  "addtocart(item)">
                     Add to cart</button>
                 </div>
               </div>
-        
-            </div>
+             
           </div>
+       </div>
         
-        </div>
-     </ng-container>
   </div>
+      
+</div>
 
     <div class="cart ">
               <div class="container">
@@ -44,7 +49,7 @@
                           <th scope="col"></th>
                           <th scope="col">Item</th>
                           <th scope="col" class="col"></th>
-                          <th scope="col">Qty</th>
+                          <!-- <th scope="col">Qty</th> -->
                           <th scope="col">Price</th> 
                         </tr>
                       </thead>
@@ -58,13 +63,13 @@
                           <td > <button class="close" (click)="removeItem(obj)">X</button>
                           </td>
                          
-                          <td class="qty">
+                          <!-- <td class="qty">
                             <form>
-                            <div class="button1" (click)="decrementCounter()"  >-</div>
+                            <div class="button1" (click)="decrementCounter(obj)"  >-</div>
                             <input type="number"  min="1"id="number" max="10" value="{{count}}" />
-                            <div class="button2" (click)="incrementCounter()"   >+</div>
+                            <div class="button2" (click)="incrementCounter(obj)"   >+</div>
                           </form>
-                        </td>
+                        </td> -->
                          
                           <td>{{change2(obj)}}$</td>
           
